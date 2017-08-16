@@ -1,0 +1,18 @@
+#
+# SETUP CONTAINER BASE: 
+# This script should be overridden in images whose containers need setting up while running.
+#
+
+echo "Running container-specific setup-scripts"
+
+for I in $(ls /setup-scripts)
+do
+  bash /setup-scripts/$I
+done
+
+echo "Activating supervisord-configs"
+mv /etc/supervisor/conf.off/* /etc/supervisor/conf.d/
+
+echo "Everything should be setup now"
+
+exit 0
