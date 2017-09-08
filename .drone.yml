@@ -34,7 +34,6 @@ pipeline:
     repositories:
     - eorlbruders-dockerimages/simple-http-server
     - eorlbruders-dockerimages/cron
-    - eorlbruders-dockerimages/etherpad
     - eorlbruders-dockerimages/mpd
     - eorlbruders-dockerimages/icecast
     secrets:
